@@ -1,1 +1,1 @@
-# leetcode
+# LeetCode Solutions in Go
