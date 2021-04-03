@@ -7,20 +7,19 @@ import (
 )
 
 func firstUniqChar(s string) int {
-	hash := make(map[byte]uint)
-	charArray := []byte(s)
+	hash := make(map[rune]bool)
 
-	for _, char := range charArray {
+	for _, char := range s {
 		_, exist := hash[char]
 		if exist {
-			hash[char] += 1 
+			hash[char] = false
 		} else {
-			hash[char] = 1
+			hash[char] = true
 		}
 	}
 
-	for i, char := range charArray {
-		if hash[char] == 1 {
+	for i, char := range s {
+		if hash[char] {
 			return i
 		}
 	}
