@@ -1,4 +1,4 @@
-// Two Sum
+// Valid Sudoku
 
 package main
 
