@@ -1,4 +1,4 @@
-// Move zeros
+// Reverse String
 
 package main
 
