@@ -9,18 +9,10 @@ func rotate(matrix [][]int) {
 
 	for i := 0; i < n/2; i++ {
 		for j := i; j < (n - i - 1); j++ {
-			fmt.Println(i, j)
 			temp := matrix[i][j]
-
 			matrix[i][j] = matrix[n-j-1][i]
-			fmt.Println(n-j-1, i)
-
 			matrix[n-j-1][i] = matrix[n-i-1][n-j-1]
-			fmt.Println(n-i-1, n-j-1)
-
 			matrix[n-i-1][n-j-1] = matrix[j][n-i-1]
-			fmt.Println(j, n-i-1)
-
 			matrix[j][n-i-1] = temp
 		}
 	}
