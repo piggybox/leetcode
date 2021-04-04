@@ -16,5 +16,5 @@ func main() {
 	str := []byte{'H', 'a', 'n', 'n', 'a', 'h'}
 
 	reverseString(str)
-	fmt.Printf(string(str))
+	fmt.Print(string(str))
 }
