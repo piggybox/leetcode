@@ -1,4 +1,4 @@
-// 1812. Determine Color of a Chessboard Square
+// Determine Color of a Chessboard Square
 
 package main
 
