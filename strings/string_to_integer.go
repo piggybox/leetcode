@@ -1,4 +1,4 @@
-// Reverse String
+// String to integer
 
 package main
 

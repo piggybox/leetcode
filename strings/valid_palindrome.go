@@ -1,4 +1,4 @@
-// Reverse String
+// Valid Palindrome
 
 package main
 
