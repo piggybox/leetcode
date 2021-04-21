@@ -1,4 +1,5 @@
 // String to integer
+// medium
 
 package main
 

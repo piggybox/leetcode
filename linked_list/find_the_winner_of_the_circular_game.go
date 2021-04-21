@@ -1,4 +1,5 @@
 // Find the Winner of the Circular Game
+// medium
 
 package main
 

@@ -1,4 +1,5 @@
 // Valid Sudoku
+// medium
 
 package main
 
