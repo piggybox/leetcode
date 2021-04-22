@@ -1,3 +1,4 @@
+-- easy
 SELECT
     t2.id
 FROM

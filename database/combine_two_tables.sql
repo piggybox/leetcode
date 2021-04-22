@@ -1,3 +1,4 @@
+-- easy
 SELECT
     t1.firstname,
     t1.lastname,

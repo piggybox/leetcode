@@ -1,3 +1,4 @@
+-- medium
 SELECT
     DISTINCT t1.num ConsecutiveNums
 FROM

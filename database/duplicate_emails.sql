@@ -1,3 +1,4 @@
+-- easy
 SELECT
     email
 FROM
