@@ -1,5 +1,5 @@
 -- easy
-DELETE t1
+DELETE t1 -- important to add t1 here for mysql to run
 FROM
     person t1
     JOIN person t2
