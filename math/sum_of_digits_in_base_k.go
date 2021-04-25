@@ -1,4 +1,5 @@
 // Sum of Digits in Base K
+// easy
 
 package main
 
