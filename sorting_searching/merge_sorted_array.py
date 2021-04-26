@@ -7,23 +7,15 @@ class Solution:
         """
         Do not return anything, modify nums1 in-place instead.
         """
-        
 
-        j = 0  # pointer for nums2
-        for i in range(m):
-            if j > n - 1:
-                break
-            if nums1[i] < nums2[j]:
-                continue  # i += 1
+        # filling from back!
+        a, b, write_index = m - 1, n - 1, m + n - 1
+        while b >= 0:
+            if a >= 0 and nums1[a] > nums2[b]:
+                nums1[write_index] = nums1[a]
+                a -= 1
             else:
-                # shift the remaining of nums
-                for k in range(len(nums1) - 1, i, -1):
-                    nums1[k] = nums1[k - 1]
-                # insert nums2[j] into nums1
-                nums1[i] = nums2[j]
-                j += 1
+                nums1[write_index] = nums2[b]
+                b -= 1
 
-        # continue the rest of nums2
-        if j < n - 1:
-            for k in range(j, n):
-                nums1[m + k] = nums2[k]
+            write_index -= 1
