@@ -7,8 +7,9 @@ def myAtoi(s):
     # skip white space
     while i < len(s) and s[i] == " ":
         i += 1
+        
     # process +/- symbols
-    while i < len(s) and (s[i] == "+" or s[i] == "-"):
+    if i < len(s) and (s[i] == "+" or s[i] == "-"):
         if s[i] == "-":
             sign = -1
         i += 1
