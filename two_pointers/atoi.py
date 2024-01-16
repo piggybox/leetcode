@@ -1,3 +1,5 @@
+# medium
+
 def myAtoi(s):
     sign = 1
     i = 0  # pointers
