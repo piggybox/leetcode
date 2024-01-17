@@ -1,3 +1,4 @@
+# easy
 class Solution:
     # @param {string} s
     # @return {boolean}
