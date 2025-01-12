@@ -6,6 +6,7 @@ import "fmt"
 
 func twoSum(nums []int, target int) []int {
 	hash := make(map[int]int)
+	// we don't populate full hash to avoid using the same number twice
 
 	for i, num := range nums {
 		part := target - num
