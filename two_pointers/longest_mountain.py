@@ -4,6 +4,7 @@ from typing import List
 class Solution:
     def longestMountain(self, arr: List[int]) -> int:
         max_mountain = 0
+        # TODO optimization: can skip a few descending items as they can't be the next mid point
         for i in range(1, len(arr)-1):
             # check minimal condition for a mountain
             if arr[i-1] < arr[i] > arr[i+1]:
