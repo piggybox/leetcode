@@ -29,7 +29,7 @@ class Solution:
                 for dr, dc in directions:
                     r, c = row + dr, col + dc
                     if (
-                        (r in range(rows) and c in range(cols))  # range check
+                        (0 <= r < rows and 0 <= c < cols)  # range check
                         and (grid[r][c] == "1")  # island check
                         and ((r, c) not in visited)  # visitation check
                     ):
