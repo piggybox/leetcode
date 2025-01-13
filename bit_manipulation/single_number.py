@@ -13,3 +13,10 @@ class Solution:
         for k, v in hash.items():
             if v == 1:
                 return k
+
+    # alternative solution with xor manipulation with O(1) space
+        xor = 0
+        for i in nums:
+            xor ^= i 
+        return xor
+    
