@@ -9,7 +9,7 @@ class Solution:
                 hash[nums[i]] += 1
             else:
                 hash[nums[i]] = 1
-            
-        for k,v in hash.items():
+
+        for k, v in hash.items():
             if v == 1:
                 return k
