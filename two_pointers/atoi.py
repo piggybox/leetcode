@@ -1,5 +1,6 @@
 # medium
 
+
 def myAtoi(s):
     sign = 1
     i = 0  # pointers
@@ -9,7 +10,7 @@ def myAtoi(s):
     # skip white space
     while i < len(s) and s[i] == " ":
         i += 1
-        
+
     # process +/- symbols
     if i < len(s) and (s[i] == "+" or s[i] == "-"):
         if s[i] == "-":

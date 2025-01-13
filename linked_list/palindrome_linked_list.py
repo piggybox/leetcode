@@ -8,6 +8,7 @@ class ListNode:
         self.val = val
         self.next = next
 
+
 class Solution:
     def isPalindrome(self, head: ListNode) -> bool:
         pointer = head

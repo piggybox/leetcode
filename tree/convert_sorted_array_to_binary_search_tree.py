@@ -10,16 +10,17 @@ class TreeNode:
         self.left = left
         self.right = right
 
+
 class Solution:
     def sortedArrayToBST(self, nums: List[int]) -> TreeNode:
         # devide and conqure
         if len(nums) == 0:
-            return None 
+            return None
         else:
             mid = len(nums) // 2
             node = TreeNode()
             node.val = nums[mid]
             node.left = self.sortedArrayToBST(nums[0:mid])
-            node.right = self.sortedArrayToBST(nums[mid:len(nums)])
+            node.right = self.sortedArrayToBST(nums[mid : len(nums)])
 
             return node

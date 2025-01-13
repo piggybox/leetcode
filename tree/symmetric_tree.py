@@ -18,7 +18,10 @@ class Solution:
             if t1 == None or t2 == None:
                 return False
 
-            return t1.val == t2.val and isMissor(
-                t1.right, t2.left) and isMissor(t1.left, t2.right)
+            return (
+                t1.val == t2.val
+                and isMissor(t1.right, t2.left)
+                and isMissor(t1.left, t2.right)
+            )
 
         return isMissor(root, root)

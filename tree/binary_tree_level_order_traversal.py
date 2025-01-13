@@ -10,6 +10,7 @@ class TreeNode:
         self.left = left
         self.right = right
 
+
 class Solution:
     def levelOrder(self, root: TreeNode) -> List[List[int]]:
         hash = {}
@@ -20,8 +21,8 @@ class Solution:
                     hash[level].append(node.val)
                 else:
                     hash[level] = [node.val]
-                traversal(node.left, level+1)
-                traversal(node.right, level+1)
+                traversal(node.left, level + 1)
+                traversal(node.right, level + 1)
 
         traversal(root, 0)
 
@@ -31,6 +32,3 @@ class Solution:
             result.append(hash[k])
 
         return result
-
-
-

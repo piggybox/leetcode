@@ -4,14 +4,18 @@ from typing import List
 class Solution:
     # lazy version using sort
     def longestCommonPrefix(self, strs: List[str]) -> str:
-        if len(strs) == 0: return ""
-        if len(strs) == 1: return strs[0]
+        if len(strs) == 0:
+            return ""
+        if len(strs) == 1:
+            return strs[0]
 
         strs.sort()
         p = ""
         for x, y in zip(strs[0], strs[-1]):
-            if x == y: p += x
-            else: break
+            if x == y:
+                p += x
+            else:
+                break
 
         return p
 
@@ -22,9 +26,9 @@ class Solution:
         except ValueError:
             return -1
 
-
     def longestCommonPrefix(self, strs: List[str]) -> str:
-        if len(strs) == 0: return ""
+        if len(strs) == 0:
+            return ""
         prefix = strs[0]
         for i in range(len(strs)):
             while index_of(prefix, strs[i]) != 0:

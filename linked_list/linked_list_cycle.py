@@ -7,20 +7,20 @@ class ListNode:
         self.val = x
         self.next = None
 
+
 class Solution:
     def hasCycle(self, head: ListNode) -> bool:
         p1 = head  # slow pointer
         p2 = head  # faster pointer
 
-        cycle = False 
+        cycle = False
 
-        while p1 != None and p2 != None and p2.next != None :
+        while p1 != None and p2 != None and p2.next != None:
             p2 = p2.next.next
-            p1 = p1.next 
+            p1 = p1.next
 
             if p1 == p2:
                 cycle = True
                 break
-
 
         return cycle

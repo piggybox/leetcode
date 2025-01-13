@@ -17,4 +17,3 @@ def rain_water(heights):
         right += 1
 
     water_level = min(max_height_left, max_height_right)
-

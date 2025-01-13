@@ -1,10 +1,8 @@
 class MinStack:
-    
     def __init__(self):
         """
         initialize your data structure here.
         """
-        
 
     def push(self, val: int) -> None:
         pass

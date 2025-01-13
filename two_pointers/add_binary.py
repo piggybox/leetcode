@@ -1,6 +1,7 @@
 # Given two binary strings str1 and str2, return their sum as a binary string.
 # easy
 
+
 def add_binary(str1: str, str2: str) -> str:
     result = ""
     carry = 0

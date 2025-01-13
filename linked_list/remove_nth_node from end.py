@@ -8,6 +8,7 @@ class ListNode:
         self.val = val
         self.next = next
 
+
 class Solution:
     def removeNthFromEnd(self, head: ListNode, n: int) -> ListNode:
         # the tricky part: the head node can be removed

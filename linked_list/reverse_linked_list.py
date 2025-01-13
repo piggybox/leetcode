@@ -7,23 +7,23 @@ class ListNode:
         self.val = val
         self.next = next
 
+
 class Solution:
     def reverseList(self, head: ListNode) -> ListNode:
         previous = None
-        current = head 
+        current = head
         next = None
 
-        # a b -> c => a <- b  c 
-        while current != None :
+        # a b -> c => a <- b  c
+        while current != None:
             # keep track of the next one of current before switching
-            next = current.next 
+            next = current.next
 
             # redirect the next pointer of current to previous
-            current.next = previous 
+            current.next = previous
 
             # move previous and current 1 step further
             previous = current
-            current = next 
+            current = next
 
         return previous
-

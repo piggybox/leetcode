@@ -2,11 +2,12 @@
 
 # overcomplicated, one pass counting the number of every color also works
 
+
 def sort_colors(colors):
     # sort an array of colors to red, white, blue order
     red, white, blue = 0, 0, len(colors) - 1  # pointers
 
-    while white <= blue: # this is also a tricky condition
+    while white <= blue:  # this is also a tricky condition
         # color checking: red 0, white 1, blue 2
         if colors[white] == 0:
             if colors[red] != 0:
@@ -22,6 +23,6 @@ def sort_colors(colors):
                 # swap white and blue
                 colors[white], colors[blue] = colors[blue], colors[white]
 
-            blue -= 1 # this is the tricky part to move blue only
+            blue -= 1  # this is the tricky part to move blue only
 
     return colors
