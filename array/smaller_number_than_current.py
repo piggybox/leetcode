@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Solution:
     def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
         # standard solution. There's a tricky O(n) solution but that's like a 

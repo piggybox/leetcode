@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Solution:
     def rotate(self, matrix: List[List[int]]) -> None:
         n = len(matrix[0])

@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Solution:
     # lazy version using sort
     def longestCommonPrefix(self, strs: List[str]) -> str:

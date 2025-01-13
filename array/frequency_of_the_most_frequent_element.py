@@ -1,6 +1,9 @@
 # Frequency of the Most Frequent Element
 # medium
 
+from typing import List
+
+
 class Solution:
     def maxFrequency(self, nums: List[int], k: int) -> int:
         max_count = 0

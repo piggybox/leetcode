@@ -19,9 +19,9 @@ import math
 
 class Solution:
     def isValidBST(self, root: TreeNode) -> bool:
-        def isValidBSTMinMax(node: TreeNode,
-                             low=-math.inf,
-                             high=math.inf):  # return flag, min, max
+        def isValidBSTMinMax(
+            node: TreeNode, low=-math.inf, high=math.inf
+        ):  # return flag, min, max
             if node is None:
                 return True
 
@@ -31,8 +31,8 @@ class Solution:
 
             # for the right branch, lower bound is the current node value and higher bound is inherited
             # for the left branch, lower bound is inherited and higher bound is the current node value
-            return isValidBSTMinMax(node.right, node.val,
-                                    high) and isValidBSTMinMax(
-                                        node.left, low, node.val)
+            return isValidBSTMinMax(node.right, node.val, high) and isValidBSTMinMax(
+                node.left, low, node.val
+            )
 
         return isValidBSTMinMax(root)

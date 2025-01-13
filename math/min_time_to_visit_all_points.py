@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Solution:
     def minTimeToVisitAllPoints(self, points: List[List[int]]) -> int:
         # math trick problem, not traveling sales man problem

@@ -1,6 +1,9 @@
 # shuffle an array
 # medium
 
+from typing import List
+
+
 class Solution:
 
     def __init__(self, nums: List[int]):

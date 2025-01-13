@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         # transform the given input to a more useful data structure
