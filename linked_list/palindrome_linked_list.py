@@ -1,6 +1,7 @@
 # Palindrome Linked List
 # easy
 
+from collections import deque
 
 # Definition for singly-linked list.
 class ListNode:
@@ -12,7 +13,7 @@ class ListNode:
 class Solution:
     def isPalindrome(self, head: ListNode) -> bool:
         pointer = head
-        stack = []
+        stack = deque() # more efficient than list
 
         # push to stack
         while pointer != None:
@@ -29,3 +30,6 @@ class Solution:
                 return False
 
         return True
+
+        # alternative solution to find the mid point of linked list
+        # then compare two halves, pretty complicated
