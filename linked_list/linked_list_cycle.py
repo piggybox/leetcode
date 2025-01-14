@@ -10,17 +10,13 @@ class ListNode:
 
 class Solution:
     def hasCycle(self, head: ListNode) -> bool:
-        p1 = head  # slow pointer
-        p2 = head  # faster pointer
+        fast = slow = head
 
-        cycle = False
+        while fast and fast.next:
+            fast = fast.next.next
+            slow = slow.next
 
-        while p1 != None and p2 != None and p2.next != None:
-            p2 = p2.next.next
-            p1 = p1.next
+            if fast == slow:
+                return True
 
-            if p1 == p2:
-                cycle = True
-                break
-
-        return cycle
+        return False
