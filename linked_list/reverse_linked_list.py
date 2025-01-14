@@ -12,8 +12,7 @@ class Solution:
     def reverseList(self, head: ListNode) -> ListNode:
         previous = None
         current = head
-        next = None
-
+        
         # a b -> c => a <- b  c
         while current != None:
             # keep track of the next one of current before switching
