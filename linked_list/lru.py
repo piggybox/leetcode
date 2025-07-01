@@ -1,20 +1,18 @@
 # Leetcode 146
 # medium
 
-from collections import deque
+from collections import OrderedDict
 
 class LRUCache:
     def __init__(self, capacity: int):
         self.capacity = capacity
-        self.cache = {} # for O(1) access
-        self.order = deque() # to maintain the order of keys
+        self.cache = OrderedDict()  # This will maintain the order of keys based on their usage
 
     def get(self, key: int) -> int:
         if key in self.cache:
             # Move the accessed key to the end of the order list
-            self.order.remove(key) # O(n) operation to remove the key
-            self.order.append(key)
-            
+            self.cache.move_to_end(key)
+            # Return the value associated with the key
             return self.cache[key]
         else:
             return -1
@@ -22,18 +20,14 @@ class LRUCache:
     def put(self, key: int, value: int) -> None:
         if key in self.cache:
             # Update the value and move the key to the end of the order list
+            self.cache.move_to_end(key)
             self.cache[key] = value
-            self.order.remove(key)
-            self.order.append(key)
         else:
             if len(self.cache) >= self.capacity:
-                # Remove the least recently used item
-                lru_key = self.order.popleft()
-                del self.cache[lru_key]
-            
-            # Add the new key-value pair
+                # Remove the first (least recently used) item
+                self.cache.popitem(last=False)
+            # Add the new key-value pair to the cache
             self.cache[key] = value
-            self.order.append(key)
 
 
 # Your LRUCache object will be instantiated and called as such:
