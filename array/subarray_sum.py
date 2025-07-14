@@ -15,13 +15,26 @@ class Solution:
         # find the subarray
         count = 0
 
-        for i in range(len(prefix_sum)):
-            if prefix_sum[i] == k:
-                count += 1
+        # this works but not scalable
+        # for i in range(len(prefix_sum)):
+        #     if prefix_sum[i] == k:
+        #         count += 1
 
-            for j in range(i):
-                if prefix_sum[i] - prefix_sum[j] == k:
-                    count += 1
+        #     for j in range(i):
+        #         if prefix_sum[i] - prefix_sum[j] == k:
+        #             count += 1
+
+        # more scalable way: use a hash map to store the prefix sum and count
+        prefix_sum_map = {0:1} # very important to initialize the euqal case!
+
+        for sum in prefix_sum:
+            if (sum - k) in prefix_sum_map:
+                count += prefix_sum_map[sum - k]
+            
+            if sum in prefix_sum_map:
+                prefix_sum_map[sum] += 1
+            else:
+                prefix_sum_map[sum] = 1
 
         return count
         
