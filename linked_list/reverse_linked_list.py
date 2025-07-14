@@ -14,7 +14,7 @@ class Solution:
         current = head
         
         # a b -> c => a <- b  c
-        while current != None:
+        while current is not None:
             # keep track of the next one of current before switching
             next = current.next
 
