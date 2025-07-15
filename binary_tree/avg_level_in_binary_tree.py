@@ -11,9 +11,9 @@ class Solution:
             return []
 
         result = []
-        queue = [root]
+        queue = [root] # queue for BFS, stack for DFS
 
-        # Perform level order traversal / BFS
+        # Perform level order traversal
         while queue:
             level_sum = 0
             level_count = len(queue)
