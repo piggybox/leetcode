@@ -12,7 +12,7 @@ def reverse_queue(queue, k):
     # Step 1: Dequeue the first k elements
     stack = []
     for _ in range(k):
-        stack.append(queue.pop(0))
+        stack.append(queue.popleft())
 
     # Step 2: Enqueue the elements back in reverse order
     while stack:
@@ -20,7 +20,7 @@ def reverse_queue(queue, k):
 
     # Step 3: Move the remaining elements to the back of the queue
     for _ in range(len(queue) - k):
-        queue.append(queue.pop(0))
+        queue.append(queue.popleft())
 
     return queue
 
